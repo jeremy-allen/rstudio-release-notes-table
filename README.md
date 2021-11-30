@@ -1,2 +1,2 @@
 # rstudio-release-notes-table
-Produces a filterable table of RStudio release notes
+Produces a dashboard of filterable tables of RStudio release notes
