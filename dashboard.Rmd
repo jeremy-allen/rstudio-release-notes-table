@@ -1,0 +1,139 @@
+---
+title: "RStudio Release Notes"
+output: 
+  flexdashboard::flex_dashboard:
+    theme: readable
+    orientation: columns
+    vertical_layout: fill
+    favicon: favicon.png
+    css: styles.css
+    navbar:
+      - { title: "Follow us on Twitter!", href: "https://twitter.com/rstudio" }
+self_contained: true
+---
+
+```{r include=FALSE}
+
+library(tidyverse)
+library(rvest)
+library(assertthat)
+library(reactable)
+
+```
+
+
+```{r include=FALSE}
+
+source("scrape_content.R")
+
+```
+
+RStudio’s primary purpose is to create free and open-source software for data science, scientific research, and technical communication. This allows anyone with access to a computer to participate freely in a global economy that rewards data literacy; enhances the production and consumption of knowledge; and facilitates collaboration and reproducible research in science, education and industry. We spend over 50% of our engineering resources on open-source software development, and provide extensive support to the open source data science community.    
+
+```{=html}
+<div class="center">
+  <img src="rstudio_team_banner.png" alt="RStudio Team logo" style="height:55px;">
+</div>
+```
+
+
+
+
+Column {data-width=400} {.tabset}
+-----------------------------------------------------------------------
+Product Release Notes and Domain Search
+
+### RSW 
+
+Jump into your first line of code immediately. RStudio Workbench supports both R and Python wonderfully, leveraging support for Jupyter and VSCode for Python users. The best part is you can switch between languages, or use different languages for different projects, without adding work for your IT team. 
+
+```{r echo=FALSE}
+
+reactable(
+  rswnotes,
+  groupBy = "version",
+  filterable = TRUE,
+  pagination = FALSE,
+  columns = list(
+    version = colDef(maxWidth = 180),
+    note = colDef(minWidth = 400)
+  )
+)
+
+```
+
+### RSC
+
+Free your data science team of the time and friction involved with maintaining data products. Curate all of your organization’s data products into a single portal, then have them update and distribute automatically.  
+
+```{r echo=FALSE}
+
+reactable(
+  rscnotes,
+  groupBy = "version",
+  filterable = TRUE,
+  pagination = FALSE,
+  columns = list(
+    version = colDef(maxWidth = 180),
+    note = colDef(minWidth = 400)
+  )
+)
+
+```
+
+### RSPM
+
+A repository management server to organize and centralize packages across your team, department, or entire organization. Get offline access to CRAN, PyPI, and Bioconductor, share local packages, restrict package access, find packages across repositories, and more.  
+
+```{r echo=FALSE}
+
+reactable(
+  rspmnotes,
+  groupBy = "version",
+  filterable = TRUE,
+  pagination = FALSE,
+  columns = list(
+    version = colDef(maxWidth = 180),
+    note = colDef(minWidth = 400)
+  )
+)
+
+```
+
+### SEARCH
+
+This is a custom Google search engine that searches only RStudio sites, including blogs, and sites for databases and spark. This engine excludes Community.  
+
+<script async src="https://cse.google.com/cse.js?cx=e1ab735d551d64cb1"></script>
+<div class="gcse-search"></div>
+
+If you want to use this search outside of this dashboard, you can access it here:  
+
+[Search all RStudio docs, sites, and blogs](https://cse.google.com/cse?cx=015679499437352667520:nldqgkar9us){target="_blank"}   
+
+---
+
+[Solutions](https://solutions.rstudio.com/){target="_blank"}  
+
+[Docs](https://docs.rstudio.com/){target="_blank"}  
+
+
+### Links for Updates
+
+#### Get Notified  
+
+[Sign up for product updates](https://www.rstudio.com/about/subscription-management/){target="_blank"}  
+
+#### Product Release Notes  
+
+[RStudio Release Notes](https://docs.rstudio.com/release-notes/){target="_blank"}  
+
+#### Read Our Blogs  
+
+[RStudio main blog](https://blog.rstudio.com){target="_blank"}  
+
+[RStudio tidyverse blog](https://www.tidyverse.org/blog/){target="_blank"}  
+
+[RStudio AI blog](https://blogs.rstudio.com/ai/){target="_blank"}  
+
+[RStudio education blog](https://education.rstudio.com/blog/){target="_blank"}  

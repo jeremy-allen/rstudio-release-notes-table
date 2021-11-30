@@ -1,0 +1,32 @@
+.navbar-inverse .navbar-brand {
+  color: #4c83b6;
+}
+
+a, a:hover {
+  color: #4c83b6;
+}
+
+.dashboard-page-wrapper, .dashboard-container {
+  background: #f6f6f6;
+}
+
+body {
+  color: #708090;
+  font-size: 1.2rem;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-tabs-custom > .nav-tabs > li.active {
+border-top-color: #4c83b6;
+}
+
+#column-data-width400 > ul > li:last-child {
+float: right;
+}
+
+<div class="page-header-image" data-parallax="none" style="background-image: url('https://www.rstudio.com/assets/img/Team-Hero.png'); background-position: center bottom; background-color: #f3f3f3;background-size: cover;">
+        </div>
